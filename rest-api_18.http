@@ -1,0 +1,71 @@
+POST http://localhost:9000/users/add
+Content-Type: application/json
+
+{
+  "name": "chat_1", "users": ["<USER_ID_1>", "<USER_ID_2>"]
+}
+
+
+###
+POST http://localhost:9000/users/add
+Content-Type: application/json
+
+{
+  "username": "user_15"
+}
+
+
+###
+POST http://localhost:9000/chats/add
+Content-Type: application/json
+
+{
+  "name": "chat_14",
+  "users": [
+    "1",
+    "2",
+    "3"
+  ]
+}
+
+###
+POST http://localhost:9000/messages/add
+Content-Type: application/json
+
+{
+  "chat": 1,
+  "author": 1,
+  "text": "Hi"
+}
+
+###
+POST http://localhost:9000/chats/get
+Content-Type: application/json
+
+{
+  "id": "3"
+}
+
+###
+POST http://localhost:9000/messages/get
+Content-Type: application/json
+
+{
+  "id": "21"
+}
+
+
+###
+POST http://localhost:9000/messages/get
+Content-Type: application/json
+
+{
+  "chat": "<3>", "author": "<13>", "text": "hi"
+}
+#####
+POST http://localhost:9000/messages/get
+Content-Type: application/json
+
+{
+  "chat": "<14>"
+}
